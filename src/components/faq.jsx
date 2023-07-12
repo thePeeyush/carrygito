@@ -38,9 +38,9 @@ function Faq() {
       </div>
       <div className="flex flex-col gap-8">
       {
-        QAs.map((element)=>{
+        QAs.map((element,index)=>{
             return(
-                <QA que={element.Q} ans={element.A}/>
+                <QA que={element.Q} ans={element.A} key={index}/>
             )
         })
       }
@@ -49,9 +49,9 @@ function Faq() {
   );
 }
 
-function QA({ que, ans }) {
+function QA({ que, ans, key }) {
   return(
-    <details className="group [&_summary::-webkit-details-marker]:hidden">
+    <details className="group [&_summary::-webkit-details-marker]:hidden" key={key}>
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
       <h2 className="font-medium">{que}</h2>
 

@@ -1,4 +1,3 @@
-import Faq from '@/components/faq';
 import Footer from '@/components/footer';
 import Sections from '@/components/sections';
 

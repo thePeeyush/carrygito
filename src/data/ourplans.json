@@ -1,0 +1,42 @@
+{
+    "Plans": [
+      {
+        "title": "One meal",
+        "price": 70,
+        "period": "meal",
+        "description": "content same as regular tiffin",
+        "features": [
+          "Good for trial",
+          "meal depend on day",
+          "sunday special",
+          "wednesday special"
+        ]
+      },
+      {
+        "title": "Lunch/Dinner",
+        "price": 1600,
+        "period": "month",
+        "description": "If you want only Lunch or Dinner",
+        "features": [
+          "30 tiffins",
+          "meal depend on day",
+          "sunday special",
+          "wednesday special",
+          "leave upto 7 days"
+        ]
+      },
+      {
+        "title": "Lunch + Dinner",
+        "price": 2900,
+        "period": "month",
+        "description": "Lunch and dinner combo",
+        "features": [
+          "57 tiffins",
+          "meal depend on day",
+          "sunday special",
+          "wednesday special",
+          "leave upto 7 days"
+        ]
+      }
+    ]
+  }

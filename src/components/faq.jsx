@@ -49,9 +49,9 @@ function Faq() {
   );
 }
 
-function QA({ que, ans, key }) {
+function QA({ que, ans }) {
   return(
-    <details className="group [&_summary::-webkit-details-marker]:hidden" key={key}>
+    <details className="group [&_summary::-webkit-details-marker]:hidden">
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
       <h2 className="font-medium">{que}</h2>
 
@@ -63,15 +63,15 @@ function QA({ que, ans, key }) {
         stroke="currentColor"
       >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M19 9l-7 7-7-7"
         />
       </svg>
     </summary>
 
-    <p className="mt-4 px-4 leading-relaxed text-gray-700">{ans}</p>
+    <p className="mt-4 p-4 rounded-md leading-relaxed text-green-800 bg-green-200">{ans}</p>
   </details>
   )
 }

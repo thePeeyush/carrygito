@@ -4,7 +4,11 @@
 
 body{
     background: rgb(255, 255, 255);
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
+
+
 
 .hero{
     animation: rotate 120s linear infinite;

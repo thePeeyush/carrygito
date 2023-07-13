@@ -9,7 +9,7 @@ function Footer() {
           <div className="mb-10 lg:mb-0">
             <Image src="/Logo.png" alt="Image" width={200} height={200} className="mb-5 mx-auto lg:mx-0" />
 
-            <p className="font-normal text-gray-400 text-md max-w-xs">Our expert chefs prepare fresh and flavorful dishes every day, ensuring a balanced and wholesome meal experience.</p>
+            <p className="font-normal text-gray-400 text-md max-w-xs mx-auto">Our expert chefs prepare fresh and flavorful dishes every day, ensuring a balanced and wholesome meal experience.</p>
           </div>
 
           <div className="space-y-4 mb-10 lg:mb-0">

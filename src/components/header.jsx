@@ -6,7 +6,7 @@ function Header() {
         <div className="mx-auto text-center lg:text-left xl:mx-0 mb-4 xl:mb-0">
           <h1 className="font-bold text-gray-700 text-3xl md:text-6xl leading-loose mb-10"> Healthy <br /> <span className="text-green-600">Delicious</span> <br />  Nutritious.</h1>
   
-          <p className="font-normal text-gray-500 max-w-xs md:max-w-xl text-sm md:text-lg mb-10">Meals delivered right to your doorstep with our Tiffin Service <br /> every single day</p>
+          <p className="font-normal text-gray-500 max-w-xs md:max-w-lg text-sm md:text-lg mb-10">Meals delivered right to your doorstep with our Tiffin Service every single day</p>
   
           <div className="flex items-center justify-center lg:justify-start">
             <a href="#" className="px-8 py-3 bg-green-500 font-medium text-white text-md md:text-lg rounded-md hover:bg-green-700 transition ease-in-out duration-300">Start Now</a>

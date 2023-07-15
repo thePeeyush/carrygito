@@ -1,1 +1,21 @@
 {
+    "links":{
+        
+        "Our Services":[
+            "One Meal",
+            "Monthly Lunch",
+            "Monthly Dinner",
+            "Monthly Combo"
+        ],
+        "Area Covered":[
+            "Bhawarkua",
+            "Geetabhawan",
+            "Khandwanaka"
+        ],
+        "Location":[
+            "121 Rambhag, Indore",
+            "888-123-42287",
+            "info@example.com"
+        ]
+    }
+}

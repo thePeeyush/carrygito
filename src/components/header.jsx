@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Header() {
     return (
-      <header className="flex-col lg:flex-row flex items-center justify-between mb-10">
+      <header className="flex-col lg:flex-row flex items-center justify-between mb-10 max-w-screen-lg mx-auto">
         <div className="mx-auto text-center lg:text-left xl:mx-0 mb-4 xl:mb-0">
           <h1 className="font-bold text-gray-700 text-3xl md:text-6xl leading-loose mb-10"> Healthy <br /> <span className="text-green-600">Delicious</span> <br />  Nutritious.</h1>
   

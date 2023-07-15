@@ -12,40 +12,16 @@ function Footer() {
 
             <p className="font-normal text-gray-400 text-md max-w-xs mx-auto">Our expert chefs prepare fresh and flavorful dishes every day, ensuring a balanced and wholesome meal experience.</p>
           </div>
-
-          <div className="space-y-4 mb-10 lg:mb-0">
-            <h4 className="font-semibold text-gray-500 text-lg mb-6">Our services</h4>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">Plans</a>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">Monthly</a>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">One Meal</a>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">Only Lunch</a>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">Only Dinner</a>
-          </div>
-
-          <div className="space-y-4 mb-10 lg:mb-0">
-            <h4 className="font-semibold text-gray-500 text-lg mb-6">Area Covered</h4>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">Bhawarkua</a>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">Geeta Bhawan</a>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">Khandwa Naka</a>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-semibold text-gray-500 text-lg mb-6">Location</h4>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">121 Rambhag, Indore</a>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">888-123-42287</a>
-
-            <a href="#" className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">info@example.com</a>
-          </div>
+          <>
+            {
+              Object.entries(footlinks.links).map(([title , items ])=>{
+                return(
+                  <FootCard head={title} links={items} key={title}/>
+                )
+              })
+            }
+          </>
+          
         </div>
 
         <hr className="text-gray-300 mt-10" />
@@ -54,6 +30,18 @@ function Footer() {
       </div>
     </footer>
   );
+}
+
+function FootCard({head , links}) {
+  return(
+      <div className="space-y-4 mb-10 lg:mb-0">
+            <h4 className="font-semibold text-gray-500 text-lg mb-6">{head}</h4>
+            {links.map((link,index)=>{
+              return(
+                <a href="#" key={index} className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">{link}</a>
+              )
+            })}
+          </div>)
 }
 
 export default Footer;

@@ -32,7 +32,7 @@ const QAs = [
 
 function Faq() {
   return (
-    <div className="max-w-5xl">
+    <div className="max-w-5xl mx-auto">
       <div>
         <h1 className=" font-bold text-3xl mx-2 mb-10">FAQs</h1>
       </div>

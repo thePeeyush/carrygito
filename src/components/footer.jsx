@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import footlinks from '../data/footlinks.json';
 
 function Footer() {
   return (

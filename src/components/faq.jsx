@@ -19,15 +19,6 @@ const QAs = [
     A: "The tiffin consists of a variety of items to provide a well-rounded meal. It includes cooked rice as the main carbohydrate, a selection of vegetables, seasoned gram in a plastic container for protein, a fresh salad for added nutrition, an aachar packet for flavor, a salt packet for seasoning, tissue paper for convenience, and an environmentally friendly paper spoon for eating.",
   },
 
-  {
-    Q: "What items are included in the tiffin?",
-    A: "The tiffin consists of a variety of items to provide a well-rounded meal. It includes cooked rice as the main carbohydrate, a selection of vegetables, seasoned gram in a plastic container for protein, a fresh salad for added nutrition, an aachar packet for flavor, a salt packet for seasoning, tissue paper for convenience, and an environmentally friendly paper spoon for eating.",
-  },
-
-  {
-    Q: "What items are included in the tiffin?",
-    A: "The tiffin consists of a variety of items to provide a well-rounded meal. It includes cooked rice as the main carbohydrate, a selection of vegetables, seasoned gram in a plastic container for protein, a fresh salad for added nutrition, an aachar packet for flavor, a salt packet for seasoning, tissue paper for convenience, and an environmentally friendly paper spoon for eating.",
-  },
 ];
 
 function Faq() {
@@ -40,7 +31,7 @@ function Faq() {
       {
         QAs.map((element,index)=>{
             return(
-                <QA que={element.Q} ans={element.A} key={index}/>
+                <QA que={element.Q} ans={element.A} key={index} open={index === 0 ? true : false} />
             )
         })
       }
@@ -49,9 +40,9 @@ function Faq() {
   );
 }
 
-function QA({ que, ans }) {
+function QA({ que, ans ,open  }) {
   return(
-    <details className="group [&_summary::-webkit-details-marker]:hidden">
+    <details className="group [&_summary::-webkit-details-marker]:hidden" open={open} >
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
       <h2 className="font-medium">{que}</h2>
 
@@ -71,7 +62,7 @@ function QA({ que, ans }) {
       </svg>
     </summary>
 
-    <p className="mt-4 p-4 rounded-md leading-relaxed text-green-800 bg-green-200">{ans}</p>
+    <p className=" p-4 rounded-b -translate-y-2 leading-relaxed text-green-700 bg-green-100">{ans}</p>
   </details>
   )
 }

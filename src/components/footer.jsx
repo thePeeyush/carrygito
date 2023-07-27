@@ -38,7 +38,7 @@ function FootCard({head , links}) {
             <h4 className="font-semibold text-gray-500 text-lg mb-6">{head}</h4>
             {links.map((link,index)=>{
               return(
-                <a href="#" key={index} className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">{link}</a>
+                <p key={index} className="block font-normal text-gray-400 text-md hover:text-gray-700 transition ease-in-out duration-300">{link}</p>
               )
             })}
           </div>)

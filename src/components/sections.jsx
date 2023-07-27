@@ -3,6 +3,7 @@ import Header from "./header";
 import Faq from "./faq";
 import Plans from "./plans";
 import ourPlans from "../data/ourplans.json"
+import { Show } from "./show";
 
 function Sections() {
     return (
@@ -13,13 +14,17 @@ function Sections() {
           <Header />
         </div>
       </section>
+
+      <section>
+        <Show/>
+      </section>
       
-      <section className="py-2">
-        <div className=" my-10  w-full">
+      <section >
+        <div className=" mb-10  w-full">
           <Plans ourPlans={ourPlans.Plans}/>
         </div>
       </section>
-      <section className="py-2">
+      <section>
         <div className="container max-w-screen-xl my-20 mx-auto px-4">
           <Faq/>
         </div>

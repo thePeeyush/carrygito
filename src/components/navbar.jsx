@@ -39,40 +39,20 @@ function Navbar() {
           navbarOpen ? "flex" : "hidden"
         }`}
       >
-        <li>
-          <a
-            className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0"
-            href="#Plans"
-          >
-            Plans
-          </a>
+        <li className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
+          <a href="#Plans">Plans</a>
         </li>
 
-        <li>
-          <a
-            className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0"
-            href="#Footer"
-          >
-            Service
-          </a>
+        <li className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
+          <a href="#Footer">Service</a>
         </li>
 
-        <li>
-          <a
-            className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0"
-            href="https://wa.me/+918989599699?text=Hi%20CarryGITO"
-          >
-            Contact
-          </a>
+        <li className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
+          <a href="https://wa.me/+918989599699?text=Hi%20CarryGITO">Contact</a>
         </li>
 
-        <li>
-          <a
-            className="px-8 py-3 font-medium text-green-500 text-lg text-center border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300"
-            href="/form"
-          >
-            Get Trial
-          </a>
+        <li className="px-8 py-3 font-medium text-green-500 text-lg text-center border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">
+          <a href="/form">Get Trial</a>
         </li>
       </ul>
     </nav>

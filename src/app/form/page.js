@@ -1,10 +1,32 @@
+"use client";
+
 import Form from "@/components/form";
-import Image from "next/image";
+import Verification from "@/components/otpverify";
+import { useState } from "react";
 
 export default function Page() {
+  const [submit, setSubmit] = useState(false);
+  const [isVerified, setIsVerified] = useState(false);
+
   return (
-    <div className=" bg-green-200 min-h-screen p-4 md:p-10 flex justify-center">
-      <Form />
+    <div>
+      {!submit && (
+        <div className=" bg-green-200 min-h-screen p-4 md:p-10 flex justify-center">
+          <Form setSubmit={setSubmit} />
+        </div>
+      )}
+
+      {submit && !isVerified &&(
+        <div className=" bg-green-200 min-h-screen p-4 md:p-10 flex justify-center">
+          <Verification setIsVerified={setIsVerified} />
+        </div>
+      )}
+
+      {isVerified && (
+        <div>
+          <h1> done ............</h1>
+        </div>
+      )}
     </div>
   );
 }

@@ -3,8 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Input, Select } from "./formelements";
 import Image from "next/image";
-import { verifyAccount } from "@/client/authverify";
-import { createAccount } from "@/client/authsession";
+import { createAccount } from "@/services/authsession";
 
 const schema = yup
   .object({
@@ -35,7 +34,7 @@ export default function Form({ setSubmit }) {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center bg-white shadow-xl rounded-xl md:px-10 w-full max-w-4xl">
+    <div className="flex flex-col lg:flex-row lg:justify-center items-center bg-white shadow-xl rounded-xl py-4 md:px-10 w-full max-w-4xl">
       <div className="flex flex-row lg:flex-col justify-start items-center">
         <Image
           src="/Logo.png"

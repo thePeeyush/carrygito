@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <nav className="flex-wrap lg:flex items-center justify-between mb-4 lg:mb-8">
       <div className="flex items-center justify-end mb-6 lg:mb-0">
-        <Image src="/Logo.png" alt="Image" width={200} height={200} />
+        <Image src="/Logo-light.png" alt="Image" width={200} height={200} />
 
         <button
           className="flex items-center justify-center border border-green-500 w-10 h-10 text-green-500 rounded-md outline-none lg:hidden ml-auto"
@@ -39,20 +39,20 @@ function Navbar() {
           navbarOpen ? "flex" : "hidden"
         }`}
       >
-        <li className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
-          <a href="#Plans">Plans</a>
+        <li className=" mb-5 lg:mb-0">
+          <a href="#Plans" className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300">Plans</a>
         </li>
 
-        <li className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
-          <a href="#Footer">Service</a>
+        <li className="mb-5 lg:mb-0">
+          <a href="#Footer" className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300">Service</a>
         </li>
 
-        <li className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
-          <a href="https://wa.me/+918989599699?text=Hi%20CarryGITO">Contact</a>
+        <li className="mb-5 lg:mb-0">
+          <a href="https://wa.me/+918989599699?text=Hi%20CarryGITO" className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300">Contact</a>
         </li>
 
-        <li className="px-8 py-3 font-medium text-green-500 text-lg text-center border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">
-          <a href="/form">Get Trial</a>
+        <li className="flex" >
+          <a href="/form" className=" w-full py-3 px-8 font-medium text-green-500 text-lg text-center border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">Get Trial</a>
         </li>
       </ul>
     </nav>

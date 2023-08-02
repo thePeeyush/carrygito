@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Input } from "./formelements";
 import Image from "next/image";
-import { verifyAccount } from "@/client/authverify";
+import { verifyAccount } from "@/services/authverify";
 
 const otpSchema = yup.object().shape({
   otp: yup

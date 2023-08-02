@@ -2,12 +2,12 @@ import Image from "next/image"
 
 export const Show = () => {
     return(
-        <div className=" bg-green-50 p-8">
+        <div className=" bg-green-600 p-8">
             <div className="my-8">
-        <h1 className="text-4xl lg:text-6xl text-gray-700 text-center font-bold">
+        <h1 className="text-4xl lg:text-6xl text-green-50 text-center font-bold">
           First Glance
         </h1>
-        <p className="text-center text-md text-gray-500 py-4">
+        <p className="text-center text-md text-green-200 py-4">
             Our expert chefs prepare fresh and flavorful dishes every day.
         </p>
       </div>

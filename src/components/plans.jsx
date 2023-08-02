@@ -1,7 +1,7 @@
 export default function Plans({ourPlans}) {
 
   return (
-    <div id="Plans" className=" w-full p-10 pb-20">
+    <div id="Plans" className=" w-full p-10 pb-20 bg-green-50">
       <div className="my-8">
         <h1 className="text-4xl lg:text-6xl text-gray-700 text-center font-bold">
           Our Plans

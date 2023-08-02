@@ -1,5 +1,5 @@
 import { Permission, Role } from "appwrite";
-import { default as account } from "./account";
+import { default as account } from "./account.config";
 import databases from "./database";
 
 export const setUserData = (data) => {

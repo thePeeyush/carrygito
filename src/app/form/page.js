@@ -11,13 +11,13 @@ export default function Page() {
   return (
     <div>
       {!submit && (
-        <div className=" bg-green-200 min-h-screen p-4 md:p-10 flex justify-center">
+        <div className=" bg-green-200 min-h-screen  lg:p-10 flex justify-center">
           <Form setSubmit={setSubmit} />
         </div>
       )}
 
       {submit && !isVerified &&(
-        <div className=" bg-green-200 min-h-screen p-4 md:p-10 flex justify-center">
+        <div className=" bg-green-200 min-h-screen md:p-10 flex justify-center">
           <Verification setIsVerified={setIsVerified} />
         </div>
       )}

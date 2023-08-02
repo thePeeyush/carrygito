@@ -9,7 +9,7 @@ function Sections() {
     return (
       <>
         <section className="py-2">
-        <div className="container max-w-screen-xl mx-auto px-4 overflow-hidden">
+        <div className="container min-h-screen max-w-screen-xl mx-auto px-4 overflow-hidden">
           <Navbar />
           <Header />
         </div>

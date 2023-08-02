@@ -1,9 +1,10 @@
-import { default as account } from "@/services/account.config";
+import { default as account } from "./account.config";
 import { passData } from "./authverify";
 
 export const createAccount = (data , setSubmit) => {
   const phone = data.phone;
   const userID = "tasty" + phone;
+
 
   const promise = account.createPhoneSession(userID, `+91${phone}`);
 

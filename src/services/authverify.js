@@ -1,4 +1,4 @@
-import { default as account } from "@/services/account.config";
+import { default as account } from "./account.config";
 import { setUserData } from "./setUserData";
 
 let userdata = {};

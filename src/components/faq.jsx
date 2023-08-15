@@ -1,35 +1,14 @@
-const QAs = [
-  {
-    Q: "In which tiffin do you pack our food?",
-    A: "We pack your food in a combination of paper bags and plastic containers. Our priority is to ensure that your food remains fresh,safe, and environmentally friendly. The paper bag serves as the primary tiffin carrier, while the plastic containers offer secure and hygienic storage for your meals.",
-  },
-
-  {
-    Q: "What items are included in the tiffin?",
-    A: "The tiffin consists of a variety of items to provide a well-rounded meal. It includes cooked rice as the main carbohydrate, a selection of vegetables, seasoned gram in a plastic container for protein, a fresh salad for added nutrition, an aachar packet for flavor, a salt packet for seasoning, tissue paper for convenience, and an environmentally friendly paper spoon for eating.",
-  },
-
-  {
-    Q: "What items are included in the tiffin?",
-    A: "The tiffin consists of a variety of items to provide a well-rounded meal. It includes cooked rice as the main carbohydrate, a selection of vegetables, seasoned gram in a plastic container for protein, a fresh salad for added nutrition, an aachar packet for flavor, a salt packet for seasoning, tissue paper for convenience, and an environmentally friendly paper spoon for eating.",
-  },
-
-  {
-    Q: "What items are included in the tiffin?",
-    A: "The tiffin consists of a variety of items to provide a well-rounded meal. It includes cooked rice as the main carbohydrate, a selection of vegetables, seasoned gram in a plastic container for protein, a fresh salad for added nutrition, an aachar packet for flavor, a salt packet for seasoning, tissue paper for convenience, and an environmentally friendly paper spoon for eating.",
-  },
-
-];
+import data from '@/data/faq.json';
 
 function Faq() {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto container my-20 px-4">
       <div>
-        <h1 className=" font-bold text-3xl mx-2 mb-10">FAQs</h1>
+        <h1 className=" font-bold text-gray-900 text-3xl mx-2 mb-10">FAQs</h1>
       </div>
       <div className="flex flex-col gap-8">
       {
-        QAs.map((element,index)=>{
+        data.QAs.map((element,index)=>{
             return(
                 <QA que={element.Q} ans={element.A} key={index} open={index === 0 ? true : false} />
             )
@@ -42,7 +21,7 @@ function Faq() {
 
 function QA({ que, ans ,open  }) {
   return(
-    <details className="group [&_summary::-webkit-details-marker]:hidden" open={open} >
+    <details className="group [&_summary::-webkit-details-marker]:hidden"  open={open} >
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
       <h2 className="font-medium">{que}</h2>
 

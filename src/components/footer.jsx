@@ -27,7 +27,7 @@ function Footer() {
             })}
           </>
 
-          <div className="space-y-4 max-w-[250px] flex flex-col mx-auto lg:mx-0">
+          <div className="space-y-4 mb-10 lg:mb-0 max-w-[250px] mx-auto lg:mx-0">
             <h4 className="font-semibold text-green-500 text-lg mb-6">
               Location
             </h4>

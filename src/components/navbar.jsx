@@ -52,7 +52,7 @@ function Navbar() {
         </li>
 
         <li className="flex" >
-          <a href="/form" className=" w-full py-3 px-8 font-medium text-green-500 text-lg text-center border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">Get Trial</a>
+          <a href="/order" className=" w-full py-3 px-8 font-medium text-green-500 text-lg text-center border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">Get Trial</a>
         </li>
       </ul>
     </nav>

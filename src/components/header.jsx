@@ -9,7 +9,7 @@ function Header() {
           <p className="font-normal text-gray-500 max-w-xs md:max-w-lg text-sm md:text-lg mb-10">Meals delivered right to your doorstep with our Tiffin Service every single day</p>
   
           <div className="flex items-center justify-center lg:justify-start">
-            <a href="/form" className="px-8 py-3 bg-green-500 font-medium text-white text-md md:text-lg rounded-md hover:bg-green-700 transition ease-in-out duration-300">Start Now</a>
+            <a href="/order" className="px-8 py-3 bg-green-500 font-medium text-white text-md md:text-lg rounded-md hover:bg-green-700 transition ease-in-out duration-300">Start Now</a>
           </div>
         </div>
   

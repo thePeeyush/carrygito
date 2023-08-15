@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Input } from "./formelements";
-import Image from "next/image";
 import { verifyAccount } from "@/services/authverify";
 
 const otpSchema = yup.object().shape({
@@ -28,22 +27,9 @@ export default function Verification({ setIsVerified }) {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center bg-white shadow-xl rounded-xl md:px-10 w-full max-w-4xl">
-      <div className="flex flex-row lg:flex-col justify-start items-center">
-        <Image
-          src="/Logo.png"
-          alt="Image"
-          width={500}
-          height={500}
-          className=" w-24 lg:w-64"
-        />
-        <h1 className=" text-xl text-center text-gray-800 font-semibold">
-          Tiffin Service
-        </h1>
-      </div>
-      <form
+    <form
         onSubmit={handleSubmit(onSubmit)}
-        className="form flex flex-col px-10 py-4  w-full max-w-md"
+        className="form flex flex-col py-4 h-fit w-80 md:w-96"
       >
         <Input
           label={"Verify OTP"}
@@ -51,10 +37,9 @@ export default function Verification({ setIsVerified }) {
           register={register}
           errors={errors}
           type="number"
-          className="input"
+          className="input text-center tracking-widest"
         />
-        <input type="submit" className="bg-green-400 p-2 rounded mt-10" />
+        <button type="submit" className="bg-green-500 p-2 text-white rounded mt-10" >Verify OTP</button>
       </form>
-    </div>
   );
 }

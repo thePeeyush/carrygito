@@ -4,6 +4,7 @@ import Faq from "./faq";
 import Plans from "./plans";
 import ourPlans from "../data/ourplans.json"
 import { Show } from "./show";
+import Menu from "./menu";
 
 function Sections() {
     return (
@@ -18,16 +19,16 @@ function Sections() {
       <section>
         <Show/>
       </section>
+
+      <section>
+        <Menu/>
+      </section>
       
       <section >
-        <div className=" mb-10  w-full">
           <Plans ourPlans={ourPlans.Plans}/>
-        </div>
       </section>
       <section>
-        <div className="container max-w-screen-xl my-20 mx-auto px-4">
           <Faq/>
-        </div>
       </section>
       </>
     );

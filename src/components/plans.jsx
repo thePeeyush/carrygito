@@ -1,7 +1,7 @@
 export default function Plans({ourPlans}) {
 
   return (
-    <div id="Plans" className=" w-full p-10 pb-20 bg-green-50">
+    <div id="Plans" className=" w-full bg-green-50 p-10 pb-20">
       <div className="my-8">
         <h1 className="text-4xl lg:text-6xl text-gray-700 text-center font-bold">
           Our Plans
@@ -34,11 +34,11 @@ function Card({ props }, key) {
           &#8377;{price}
           <span className="text-sm font-semibold">/{period}</span>
         </h1>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-400">{description}</p>
       </div>
 
       <div>
-        <a href="/form">
+        <a href="/order">
           <div className=" my-2 border font-semibold border-green-500 py-2 text-center rounded hover:shadow-md bg-green-500 text-white hover:bg-green-100 hover:text-green-900 transition ease-in-out duration-300">
             Buy Plan
           </div>

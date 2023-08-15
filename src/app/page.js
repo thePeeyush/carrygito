@@ -1,15 +1,16 @@
 "use client";
 
-import Home from "./home";
-
-export default function Page() {
-
-  return<>
+import Footer from '@/components/footer';
+import Sections from '@/components/sections';
 
 
-
-    <Home/>
-
-  </>
-  
+function Home() {
+  return (
+    <div className="custom-cursor">
+      <Sections />
+      <Footer />
+    </div>
+  );
 }
+
+export default Home;

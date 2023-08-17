@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Input, Select } from "./formelements";
-import { createAccount } from "@/services/authsession";
+import { createAccount } from "@/utility/authsession";
 
 
 const schema = yup
@@ -21,7 +21,7 @@ const schema = yup
   })
   .required();
 
-export default function Form({ setSubmit }) {
+export default function Form({ setSubmit,setIsVerified }) {
   const {
     register,
     handleSubmit,
@@ -30,7 +30,7 @@ export default function Form({ setSubmit }) {
     resolver: yupResolver(schema),
   });
   const onSubmit = (data) => {
-    createAccount(data,setSubmit)
+    createAccount(data,setSubmit,setIsVerified)
   };
 
   return (

@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Input } from "./formelements";
-import { verifyAccount } from "@/services/authverify";
+import { verifyAccount } from "@/utility/authverify";
 
 const otpSchema = yup.object().shape({
   otp: yup

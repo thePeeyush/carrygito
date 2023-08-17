@@ -1,9 +1,9 @@
+import { getData } from "@/components/payment";
 import { default as account } from "./account.config";
-import { setUserData } from "./setUserData";
 
-let userdata = {};
-export const passData = (data) => {
-  userdata = data;
+let userdata;
+export const passData = async(data) => {
+  userdata = await data;
 };
 
 export const verifyAccount = (data,setIsVerified) => {
@@ -18,7 +18,7 @@ export const verifyAccount = (data,setIsVerified) => {
     function (response) {
       console.log(response); // Success
       setIsVerified(true);
-      setUserData(userdata);
+      getData(userdata);
     },
     function (error) {
       console.log(error); // Failure

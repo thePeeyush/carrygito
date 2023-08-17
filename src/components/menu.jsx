@@ -62,7 +62,7 @@ const Menu = () => {
 
 const MenuCard = ({img,children}) => { 
   return(
-      <div className='flex flex-row lg:flex-col gap-8 items-start p-2 py-4 lg:p-0 lg:items-center shadow-md rounded lg:rounded-t-full max-w-md lg:m-4 lg:pb-4'>
+      <div className=' flex flex-row lg:flex-col gap-8 items-start p-2 py-4 lg:p-0 lg:items-center shadow rounded-md lg:rounded-t-full max-w-md lg:m-4 lg:pb-4'>
           <Image
           src={img}
           alt="food"

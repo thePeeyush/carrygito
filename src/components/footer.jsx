@@ -39,7 +39,7 @@ function Footer() {
               <a href="tel:+918989599699">+91 89895 99699</a>
             </p>
             <p className=" font-normal text-gray-400 text-md hover:text-gray-50 transition ease-in-out duration-300 ">
-              <a href="mailto:peeyushdehariya951@gmail.com">info@gamil.com</a>
+              <a href="mailto:carrygito@gmail.com">carrygito@gamil.com</a>
             </p>
           </div>
         </div>

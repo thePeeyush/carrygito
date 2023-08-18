@@ -39,7 +39,10 @@ export default function Payment({ setDone }) {
     if (response.ok === true) {
       setDone(true);
     }
-    else setPass(false);
+    else {
+        setPass(false);
+        setIsClicked(false);
+    }
   };
 
   return (

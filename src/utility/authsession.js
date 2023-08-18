@@ -22,12 +22,12 @@ export const createAccount = (data, setSubmit, setIsVerified) => {
 
       promise.then(
         function (response) {
-          console.log(response); // Success
+          console.log('done'); // Success
           passData(data);
           setSubmit(true);
-        },
+                  },
         function (error) {
-          console.log(error); // Failure
+          console.log('fail'); // Failure
         }
       );
     }

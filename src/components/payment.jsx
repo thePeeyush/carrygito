@@ -20,7 +20,7 @@ export default function Payment({setDone}) {
             "subject": "new Order"
           });
           
-          let response = await fetch("https://carrygito.vercel.app/api/send", { 
+          let response = await fetch("http://localhost:3000/api/send", { 
             method: "POST",
             body: bodyContent,
           });

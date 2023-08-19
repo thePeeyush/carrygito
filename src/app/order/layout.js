@@ -17,7 +17,7 @@ export default function Layout({ children }) {
                 <path d="M20.293 11H5.414l4.293-4.293a1 1 0 0 0-1.414-1.414l-6 6a1 1 0 0 0 0 1.414l6 6a1 1 0 0 0 1.414-1.414L5.414 13h14.879a1 1 0 0 0 0-2z" />
               </svg>
             </Link>
-            <div className="flex flex-row lg:flex-col justify-start items-center">
+            <div className="flex flex-col justify-start items-center">
               <Image
                 src="/Logo-light.png"
                 alt="Image"

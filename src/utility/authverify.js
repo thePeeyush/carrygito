@@ -6,8 +6,7 @@ export const passData = async (data) => {
   userdata = await data;
 };
 
-export const verifyAccount = (data, setIsVerified) => {
-  let isCorrect = false;
+export const verifyAccount = (data, setIsVerified,setCorrectOTP) => {
   const phone = userdata.phone;
   const userID = "tasty" + phone;
   const otp = data.otp;
@@ -17,16 +16,15 @@ export const verifyAccount = (data, setIsVerified) => {
   promise.then(
     function (response) {
       console.log('done'); // Success
-      isCorrect = true;
       setIsVerified(true);
       getData(userdata);
       updatename(userdata.fullname);
     },
     function (error) {
       console.log('fail'); // Failure
+      setCorrectOTP(false);
     }
   );
-  return isCorrect;
 };
 
 

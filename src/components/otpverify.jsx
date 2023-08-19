@@ -29,17 +29,17 @@ export default function Verification({ setIsVerified }) {
 
   const onSubmit = (data) => {
      setIsClicked(true);
-     const isVerified = verifyAccount(data,setIsVerified);
-     setCorrectOTP(isVerified);
+     verifyAccount(data,setIsVerified,setCorrectOTP);
+     
   };
 
   return (
     <form
         onSubmit={handleSubmit(onSubmit)}
-        className="form flex flex-col py-4 h-fit w-80 md:w-96"
+        className="form flex flex-col py-4 h-fit w-80 md:w-96 "
       >
         <Input
-          onClick={()=>{setIsClicked(false)}}
+          onClick={()=>{setIsClicked(false),setCorrectOTP(true)}}
           label={"Verify OTP"}
           name={"otp"}
           register={register}

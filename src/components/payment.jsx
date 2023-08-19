@@ -2,6 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+// let userdata = {
+//   fullname:"fasfasfs",
+//   phone:"115456586",
+//   area:"dgfdgdsg",
+//   address:"dfdgd ag,sdfs dfdsfgds gdrgdgds dsfadsfasgasgasgadrgadrgdagadg",
+//   plan:"5484/-"
+// };
 let userdata;
 export const getData = async (data) => {
   userdata = await data;
@@ -46,22 +53,24 @@ export default function Payment({ setDone }) {
   };
 
   return (
-    <div className=" flex justify-center items-center flex-col">
+    <div className=" flex justify-center items-center flex-col mx-4 max-w-[15rem] lg:py-5">
       <Order />
-      <h1>Scan QR to Pay</h1>
-      <Image src="/qr.png" alt="qr" width={150} height={150} className="" />
+      <h1 className="font-bold">Scan QR to Pay</h1>
+      <Image src="/qr.png" alt="qr" width={150} height={150} className="w-full max-w-[15rem]" />
       <p className="text-gray-500 text-sm italic">carrigito@okaxis</p>
 
-      <div className=" text-center">
+      <div className=" text-center pt-4 w-full">
         <Link href={walink}>
-          <button className="bg-green-500 p-2 m-2 rounded-md text-white">
+          <button className="bg-green-500 p-2 rounded-md text-white w-full">
             Send reciept on whatsapp
           </button>
         </Link>
+        <div className=" translate-y-1/2 my-1">
         <hr />
-        or
+        <p className="-translate-y-1/2 text-xs text-gray-500 bg-white w-fit mx-auto px-1">OR</p>
+        </div>
         {btnClicked ? (
-          <button className="bg-gray-200 p-2 m-2 rounded-md">
+          <button className="bg-gray-200 p-2 rounded-md w-full">
             {
               <img
                 className="mx-auto rounded-full"
@@ -76,7 +85,7 @@ export default function Payment({ setDone }) {
             onClick={() => {
               sendOrder(), setIsClicked(true);
             }}
-            className="bg-gray-200 p-2 m-2 rounded-md"
+            className="bg-gray-200 p-2 rounded-md w-full"
           >
             Pay on Delivery
           </button>
@@ -89,10 +98,10 @@ export default function Payment({ setDone }) {
 
 const Order = () => {
   return (
-    <div className=" text-center p-3 text-gray-600 bg-gray-100 rounded-md text-xs mb-5 max-w-sm mt-10 md:mt-0 ">
+    <div className=" text-center p-3 text-gray-600 bg-gray-100 rounded-md text-xs w-full my-5 md:mt-0 ">
       <div>
         <h1 className="text-base text-green-600">{userdata.plan}</h1>
-        <p>{userdata.address + "," + userdata.area}</p>
+        <p className=" break-all whitespace-normal">{userdata.address + "," + userdata.area}</p>
       </div>
     </div>
   );

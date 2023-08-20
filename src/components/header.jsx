@@ -14,7 +14,7 @@ function Header() {
         </div>
   
         <div className="mx-auto xl:mx-0 hero">
-        <Image src="/hero.png" alt="Image" width={450} height={450} />
+        <Image src="/hero.png" alt="Image" width={450} height={450} priority="false"/>
           
         </div>
       </header>

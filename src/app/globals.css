@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: url("https://i.postimg.cc/fR3xpNb2/mirchi.png"), default;
 }
 
 body{
@@ -44,10 +45,6 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
-}
-  
-.custom-cursor{
-  cursor: url("https://i.postimg.cc/fR3xpNb2/mirchi.png"), default;
 }
 
 /* width */

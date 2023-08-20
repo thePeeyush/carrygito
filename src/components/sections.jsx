@@ -2,14 +2,14 @@ import Navbar from "./navbar";
 import Header from "./header";
 import Faq from "./faq";
 import Plans from "./plans";
-import ourPlans from "../data/ourplans.json"
+import ourPlans from "../data/ourplans.json";
 import { Show } from "./show";
 import Menu from "./menu";
 
 function Sections() {
-    return (
-      <>
-        <section className="py-2">
+  return (
+    <>
+      <section className="py-2">
         <div className="container min-h-screen max-w-screen-xl mx-auto px-4 overflow-hidden">
           <Navbar />
           <Header />
@@ -17,21 +17,21 @@ function Sections() {
       </section>
 
       <section>
-        <Show/>
+        <Show />
       </section>
 
       <section>
-        <Menu/>
+        <Menu />
       </section>
-      
-      <section >
-          <Plans ourPlans={ourPlans.Plans}/>
+
+      <section>
+        <Plans ourPlans={ourPlans.Plans} />
       </section>
       <section>
-          <Faq/>
+        <Faq />
       </section>
-      </>
-    );
-  }
+    </>
+  );
+}
 
-  export default Sections;
+export default Sections;

@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <nav className="flex-wrap lg:flex items-center justify-between mb-4 lg:mb-8">
       <div className="flex items-center justify-end mb-6 lg:mb-0">
-        <Image src="/Logo-light.png" alt="Image" width={200} height={200} />
+        <Image src="/Logo-light.png" alt="Image" width={200} height={200} priority="false" />
 
         <button
           className="flex items-center justify-center border border-green-500 w-10 h-10 text-green-500 rounded-md outline-none lg:hidden ml-auto"

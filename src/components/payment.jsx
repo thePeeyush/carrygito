@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import LoadingBar from "./loadingbar";
 
 // let userdata = {
 //   fullname:"fasfasfs",
@@ -61,7 +62,7 @@ export default function Payment({ setDone }) {
 
       <div className=" text-center pt-4 w-full">
         <Link href={walink}>
-          <button className="bg-green-500 p-2 rounded-md text-white w-full">
+          <button className="bg-green-500 p-2 h-11 rounded-md text-white w-full">
             Send reciept on whatsapp
           </button>
         </Link>
@@ -70,14 +71,9 @@ export default function Payment({ setDone }) {
         <p className="-translate-y-1/2 text-xs text-gray-500 bg-white w-fit mx-auto px-1">OR</p>
         </div>
         {btnClicked ? (
-          <button className="bg-gray-200 p-2 rounded-md w-full">
+          <button className="bg-gray-200 p-2 h-11 rounded-md w-full">
             {
-              <img
-                className="mx-auto rounded-full"
-                width={25}
-                src="/loading.gif"
-                alt="loading..."
-              />
+              <LoadingBar/>
             }
           </button>
         ) : (

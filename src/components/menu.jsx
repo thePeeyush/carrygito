@@ -13,7 +13,7 @@ const Menu = () => {
         </p>
       </div>
 
-        <div className='flex flex-col lg:flex-row lg:text-xl text-gray-700 justify-center py-2 lg:p-8 gap-8'>
+        <div className='flex flex-col lg:flex-row lg:text-xl text-gray-700 justify-center py-2 lg:p-8 lg:pt-0 gap-8'>
         <MenuCard img={"/1.png"}>
             <ul>
                 <li>🍲 Dal</li>
@@ -21,17 +21,17 @@ const Menu = () => {
                 <li>🫓 Roti</li>
                 <li>🍚 Rice</li>
                 <li>🥗 Salad</li>
-                <li>➕ Extra</li>
+                <li>⚡ Extra</li>
               </ul>
           </MenuCard>
           <MenuCard img={"/2.png"}>
             <ul>
+                <li>✌️ 2 time special</li>
                 <li>🍛 Paneer Sabji</li>
                 <li>🫓 Butter Roti</li>
                 <li>🍚 Rice Biryani</li>
                 <li>🥗 Salad</li>
-                <li>🥈time special</li>
-                <li>➕ Extra</li>
+                <li>⚡ Extra</li>
               </ul>
           </MenuCard>
           <MenuCard img={"/3.png"}>
@@ -43,14 +43,14 @@ const Menu = () => {
                 <li>🥗 Salad</li>
                 <li>🥪 BreadPakoda</li>
                 <li>🍰 Sweets</li>
-                <li>➕ Extra</li>
+                <li>⚡ Extra</li>
                 </ul>
           </MenuCard>
           
         </div>
 
         <div className=' text-center'>
-          <h2 className='p-2 text-gray-400'><span className=' font-bold'>EXTRA : </span> Aachar, Salt , Paper spoon , Tissue paper added in a package daily. </h2>
+          <h2 className='p-2 text-gray-400'>Aachar, Salt , Paper spoon , Tissue paper are added daily in a package. </h2>
         </div>
 
 
@@ -62,7 +62,7 @@ const Menu = () => {
 
 const MenuCard = ({img,children}) => { 
   return(
-      <div className=' flex flex-row lg:flex-col gap-8 items-start p-2 py-4 lg:p-0 lg:items-center shadow rounded-md lg:rounded-t-full max-w-md lg:m-4 lg:pb-4'>
+      <div className=' flex flex-row bg-green-50 lg:flex-col gap-8 items-start p-2 py-4 lg:pb-16 lg:items-center shadow rounded-md lg:rounded-full max-w-md lg:m-4'>
           <Image
           src={img}
           alt="food"

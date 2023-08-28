@@ -1,22 +1,18 @@
+import Profile from "@/components/userprofile";
 import {  NextResponse } from "next/server";
 const nodemailer = require('nodemailer');
 
 export async function POST(request) {
   const body = await request.json();
   try {
-    const data = JSON.parse(body.message)
+    const data = JSON.parse(body.message);
+    const htmlmessage = Profile(data);
     const message = {
         from: process.env.EMAIL,
         to: process.env.EMAIL,
         subject: body.subject,
         text: body.message,
-        html:`<main>
-        <h1><span>Fullname : </span>${data.fullname}</h1>
-        <h1><span>Phone : </span>${data.phone}</h1>
-        <h1><span>Plan : </span>${data.plan}</h1>
-        <h1><span>Area : </span>${data.area}</h1>
-        <h1><span>Address : </span>${data.address}</h1>
-    </main>`,
+        html:htmlmessage,
       };
     
       let transporter = nodemailer.createTransport({

@@ -11,7 +11,7 @@ export default function Layout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className=" md:bg-green-400 min-h-screen md:p-10 flex md:items-center justify-center">
+        <div className=" md:bg-green-400 min-h-[90vh] lg:min-h-screen md:p-10 flex md:items-center justify-center">
           <div className=" flex flex-col lg:flex-row lg:justify-evenly items-center relative bg-white md:shadow-xl md:rounded-xl py-4 md:px-10 h-fit w-full md:w-fit">
             <Link href="/" className=" absolute top-5 left-5">
               <svg className="back-icon" width={20} fill="gray" viewBox="0 0 24 24">

@@ -4,6 +4,7 @@ import * as yup from "yup";
 import { Input, Select } from "./formelements";
 import { createAccount } from "@/utility/authsession";
 import { useState } from "react";
+import LoadingBar from "./loadingbar";
 
 const schema = yup
   .object({
@@ -93,10 +94,10 @@ export default function Form({ setSubmit, setIsVerified }) {
       />
       <button
           type="submit"
-          className="bg-green-500 p-2 text-white rounded mt-10"
+          className="bg-green-500 p-2 h-11 text-white rounded mt-10"
         >
           {
-            btnClicked ?( <img className="mx-auto rounded-full" width={25} src="/loading.gif" alt="loading..." /> ):("Order Now")
+            btnClicked ?( <LoadingBar/> ):("Order Now")
           }
         </button>
     </form>

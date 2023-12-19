@@ -1,5 +1,4 @@
 
-
 export default function Plans({ourPlans}) {
 
   return (

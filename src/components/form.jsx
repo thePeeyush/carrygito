@@ -5,6 +5,7 @@ import { Input, Select } from "./formelements";
 import { createAccount } from "@/utility/authsession";
 import { useState } from "react";
 import LoadingBar from "./loadingbar";
+import { useSearchParams } from 'next/navigation';
 
 const schema = yup
   .object({
@@ -24,7 +25,8 @@ const schema = yup
 
 export default function Form({ setSubmit, setIsVerified }) {
 
-  const [btnClicked,setIsClicked] = useState(false);
+  const [btnClicked, setIsClicked] = useState(false);
+  const selectedPlan = useSearchParams().get('plan');
 
   const {
     register,
@@ -73,7 +75,7 @@ export default function Form({ setSubmit, setIsVerified }) {
         name={"area"}
         register={register}
         errors={errors}
-        options={["select area", "Bhawarkua", "IT park", "Geeta bhawan"]}
+        options={["Bhawarkua", "IT park", "Geeta bhawan"]}
         autoComplete="off"
         className="select"
       />
@@ -82,10 +84,10 @@ export default function Form({ setSubmit, setIsVerified }) {
         name={"plan"}
         register={register}
         errors={errors}
+        selectedPlan={selectedPlan}
         options={[
-          "select plan",
           "₹79/- one Meal",
-          "₹2899/- Lunch + Dinner ",
+          "₹2899/- Lunch + Dinner",
           "₹1699/- only Lunch",
           "₹1699/- only Dinner",
         ]}
@@ -93,14 +95,13 @@ export default function Form({ setSubmit, setIsVerified }) {
         className="select"
       />
       <button
-          type="submit"
-          className="bg-green-500 p-2 h-11 text-white rounded mt-10"
-        >
-          {
-            btnClicked ?( <LoadingBar/> ):("Order Now")
-          }
-        </button>
+        type="submit"
+        className="bg-green-500 p-2 h-11 text-white rounded mt-10"
+      >
+        {
+          btnClicked ? (<LoadingBar />) : ("Order Now")
+        }
+      </button>
     </form>
   );
 }
-

@@ -1,3 +1,5 @@
+
+
 export default function Plans({ourPlans}) {
 
   return (
@@ -21,7 +23,7 @@ export default function Plans({ourPlans}) {
 
 function Card({ props }, key) {
   const { title, price, description, period, features } = props;
-  return (
+    return (
     <div
       key={key}
       className=" bg-white m-2 p-10 shadow-xl flex flex-col gap-6 w-full max-w-sm rounded-xl"
@@ -38,7 +40,7 @@ function Card({ props }, key) {
       </div>
 
       <div>
-        <a href="/order">
+        <a href={`/order?plan=${price}`}>
           <div className=" my-2 border font-semibold border-green-500 py-2 text-center rounded hover:shadow-md bg-green-500 text-white hover:bg-green-100 hover:text-green-900 transition ease-in-out duration-300">
             Buy Plan
           </div>

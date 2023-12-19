@@ -3,13 +3,6 @@ import Link from "next/link";
 import { useState } from "react";
 import LoadingBar from "./loadingbar";
 
-// let userdata = {
-//   fullname:"fasfasfs",
-//   phone:"115456586",
-//   area:"dgfdgdsg",
-//   address:"dfdgd ag,sdfs dfdsfgds gdrgdgds dsfadsfasgasgasgadrgadrgdagadg",
-//   plan:"5484/-"
-// };
 let userdata;
 export const getData = async (data) => {
   userdata = await data;

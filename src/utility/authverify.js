@@ -15,13 +15,13 @@ export const verifyAccount = (data, setIsVerified,setCorrectOTP) => {
 
   promise.then(
     function (response) {
-      console.log('done'); // Success
+      console.log('verification successful'); // Success
       setIsVerified(true);
       getData(userdata);
       updatename(userdata.fullname);
     },
     function (error) {
-      console.log('fail'); // Failure
+      console.log('verification failed'); // Failure
       setCorrectOTP(false);
     }
   );
@@ -34,10 +34,10 @@ const updatename = async(name)=>{
 
       promise.then(
         function (response) {
-          console.log('done'); // Success
+          console.log('name update done'); // Success
         },
         function (error) {
-          console.log('fail'); // Failure
+          console.log('name update fail'); // Failure
         }
       );
   }

@@ -2,17 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import LoadingBar from "./loadingbar";
+import { userData, userInteraction } from "../../store/userdata";
 
-let userdata;
-export const getData = async (data) => {
-  userdata = await data;
-};
-
-export default function Payment({ setDone }) {
+export default function Payment() {
   const [btnClicked, setIsClicked] = useState(false);
   const [pass,setPass] = useState(true);
+  const { phone, fullname, area, address, plan } = userData(s=>s.data)
+  const setStatus = userInteraction(s=>s.setStatus)
 
-  const { phone, fullname, area, address, plan } = userdata;
   const walink = `https://wa.me/+918989599699?text=Fullname%20%3A%20${encodeURIComponent(
     fullname
   )}%0APhone%20%3A%20${encodeURIComponent([
@@ -26,7 +23,13 @@ export default function Payment({ setDone }) {
   )}%0Aadd%20payment%20reciept%20%3A%20`;
 
   const sendOrder = async () => {
-    const messagedata = JSON.stringify(userdata);
+    const messagedata = JSON.stringify({
+      fullname: fullname,
+      phone: phone,
+      plan: plan,
+      area: area,
+      address: address,
+    });
 
     let bodyContent = JSON.stringify({
       message: messagedata,
@@ -38,7 +41,7 @@ export default function Payment({ setDone }) {
       body: bodyContent,
     });
     if (response.ok === true) {
-      setDone(true);
+      setStatus('Done')
     }
     else {
         setPass(false);
@@ -48,7 +51,7 @@ export default function Payment({ setDone }) {
 
   return (
     <div className=" flex justify-center items-center flex-col mx-4 max-w-[15rem] lg:py-5">
-      <Order />
+      <Order plan={plan} area={area} address={address} />
       <h1 className="font-bold">Scan QR to Pay</h1>
       <Image src="/qr.png" alt="qr" width={150} height={150} className="w-full max-w-[15rem]" />
       <p className="text-gray-500 text-sm italic">carrigito@okaxis</p>
@@ -85,12 +88,12 @@ export default function Payment({ setDone }) {
   );
 }
 
-const Order = () => {
+const Order = ({plan, address, area}) => {
   return (
     <div className=" text-center p-3 text-gray-600 bg-gray-100 rounded-md text-xs w-full my-5 md:mt-0 ">
       <div>
-        <h1 className="text-base text-green-600">{userdata.plan}</h1>
-        <p className=" break-all whitespace-normal">{userdata.address + "," + userdata.area}</p>
+        <h1 className="text-base text-green-600">{plan}</h1>
+        <p className=" break-all whitespace-normal">{address + "," + area}</p>
       </div>
     </div>
   );

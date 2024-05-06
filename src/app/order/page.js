@@ -2,34 +2,23 @@
 
 import Form from "@/components/form";
 import Verification from "@/components/otpverify";
-import { useState } from "react";
 import Payment from "@/components/payment";
 import Done from "@/components/done"; 
+import { userInteraction } from "../../../store/userdata";
 
 export default function Page() {
-  const [submit, setSubmit] = useState(false);
-  const [isVerified, setIsVerified] = useState(false);
-  const [done,setDone] = useState(false);
-  const [plan , setPlan] = useState("select plan");
 
-  return (
-    <div>
-      {!submit && (
-          <Form setSubmit={setSubmit} setIsVerified={setIsVerified} />
-      )}
+  const {orderStatus} = userInteraction(s=>s)
 
-      {submit && !isVerified &&(
-          <Verification setIsVerified={setIsVerified} />
-      )}
+  switch (orderStatus) {
 
-      {isVerified && !done && (
-          <Payment setDone={setDone}/>
-      )}
+    case'done': return <Done/>
 
-      {done && (
-          <Done/>
-      )}
+    case 'payment': return <Payment/>
 
-    </div>
-  );
+    case 'verification': return <Verification/>
+  
+    default: return <Form/>
+  }
+
 }

@@ -1,35 +1,31 @@
-import { getData } from "@/components/payment";
+import { ID } from "appwrite";
 import { default as account } from "./account.config";
-import { passData } from "./authverify";
 
-export const createAccount = (data, setSubmit, setIsVerified) => {
-  const promise = account.get();
+export const createAccount = (props) => {
+  const { setID, data, setStatus } = props
 
-  promise.then(
+  //check if verified 
+  account.get().then(
     function (response) {
       console.log(response); // Success
-      passData(data);
-      getData(data);
-      setSubmit(true);
-      setIsVerified(true);
+      setStatus('payment');
     },
     function (error) {
       console.log(error); // Failure
-      const phone = data.phone;
-      const userID = "tasty" + phone;
 
-      const promise = account.createPhoneSession(userID, `+91${phone}`);
-
-      promise.then(
-        function (response) {
-          console.log('done'); // Success
-          passData(data);
-          setSubmit(true);
-                  },
-        function (error) {
-          console.log('fail'); // Failure
-        }
-      );
+      //now create a phone verification process
+      account.createPhoneSession(
+        ID.unique()
+        , `+91${data.phone}`).then(
+          function (success) {
+            console.log('done'); // Success
+            setID(success.userId)
+            setStatus('verification')
+          },
+          function (error) {
+            console.log('fail',error); // Failure
+          }
+        );
     }
   );
 };

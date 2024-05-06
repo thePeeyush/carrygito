@@ -7,6 +7,7 @@ import { Input } from "./formelements";
 import { verifyAccount } from "@/utility/authverify";
 import { useState } from "react";
 import LoadingBar from "./loadingbar";
+import { userData, userInteraction } from "../../store/userdata";
 
 const otpSchema = yup.object().shape({
   otp: yup
@@ -16,9 +17,12 @@ const otpSchema = yup.object().shape({
     .required("OTP is required"),
 });
 
-export default function Verification({ setIsVerified }) {
+export default function Verification() {
   const [btnClicked,setIsClicked] = useState(false);
-  const [correctOTP, setCorrectOTP] = useState(true);
+  const [correctOTP , setCorrectOTP] =useState(false)
+  const {data,userID} = userData(s=>s)
+  const setStatus = userInteraction(s=>s.setStatus)
+  const name = data.fullname
 
   const {
     register,
@@ -30,7 +34,9 @@ export default function Verification({ setIsVerified }) {
 
   const onSubmit = (data) => {
      setIsClicked(true);
-     verifyAccount(data,setIsVerified,setCorrectOTP);
+     const otp = data.otp
+     const props = {otp,userID,setStatus,name,setCorrectOTP}
+     verifyAccount(props);
      
   };
 

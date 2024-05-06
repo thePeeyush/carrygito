@@ -6,6 +6,7 @@ import { createAccount } from "@/utility/authsession";
 import { useState } from "react";
 import LoadingBar from "./loadingbar";
 import { useSearchParams } from 'next/navigation';
+import { userData, userInteraction } from "../../store/userdata";
 
 const schema = yup
   .object({
@@ -23,11 +24,12 @@ const schema = yup
   })
   .required();
 
-export default function Form({ setSubmit, setIsVerified }) {
+export default function Form() {
 
   const [btnClicked, setIsClicked] = useState(false);
   const selectedPlan = useSearchParams().get('plan');
-
+  const {setData,setID} = userData(s=>s)
+  const setStatus = userInteraction(s=>s.setStatus)
   const {
     register,
     handleSubmit,
@@ -37,7 +39,9 @@ export default function Form({ setSubmit, setIsVerified }) {
   });
   const onSubmit = (data) => {
     setIsClicked(true);
-    createAccount(data, setSubmit, setIsVerified);
+    setData(data)
+    const props = {setID,data,setStatus}
+    createAccount(props);
   };
 
   return (

@@ -1,8 +1,9 @@
+import Link from "next/link";
 
-export default function Plans({ourPlans}) {
+export default function Plans({ourPlans,className}) {
 
   return (
-    <div id="Plans" className=" w-full bg-green-50 p-10 pb-20">
+    <div id="Plans" className={className}>
       <div className="my-8">
         <h1 className="text-4xl lg:text-6xl text-gray-700 text-center font-bold">
           Our Plans
@@ -25,7 +26,7 @@ function Card({ props }, key) {
     return (
     <div
       key={key}
-      className=" bg-white m-2 p-10 shadow-xl flex flex-col gap-6 w-full max-w-sm rounded-xl"
+      className=" bg-white m-2 p-10 shadow-xl flex flex-col gap-6 w-full max-w-sm min-w-[280px] rounded-xl"
     >
       <div>
         <h2 className="text-lg font-semibold text-green-600">{title}</h2>
@@ -39,11 +40,11 @@ function Card({ props }, key) {
       </div>
 
       <div>
-        <a href={`/order?plan=${price}`}>
+        <Link href={`/order?plan=${price}`}>
           <div className=" my-2 border font-semibold border-green-500 py-2 text-center rounded hover:shadow-md bg-green-500 text-white hover:bg-green-100 hover:text-green-900 transition ease-in-out duration-300">
             Buy Plan
           </div>
-        </a>
+        </Link>
       </div>
       <div>
         <ul>

@@ -1,24 +1,20 @@
 "use client";
 
-import Form from "@/components/form";
-import Verification from "@/components/otpverify";
-import Payment from "@/components/payment";
-import Done from "@/components/done"; 
-import { userInteraction } from "../../../store/userdata";
+import userData from "../../store/userdata";
+import Plans from "@/components/Plans";
+import ourPlans from "@/data/ourPlans.json";
+import { useSearchParams } from "next/navigation";
+import Login from "@/components/Login";
+import Checkout from "@/components/Checkout";
+import CreateProfile from "@/components/CreateProfile";
+
 
 export default function Page() {
-
-  const {orderStatus} = userInteraction(s=>s)
-
-  switch (orderStatus) {
-
-    case'done': return <Done/>
-
-    case 'payment': return <Payment/>
-
-    case 'verification': return <Verification/>
+  const {authenticated, profile} = userData(s=>s);
+  const plan = useSearchParams().get('plan');
   
-    default: return <Form/>
-  }
-
+  if(!plan) return <Plans ourPlans={ourPlans.Plans}/>
+  if(!authenticated) return <Login/>
+  if(!profile.address) return <CreateProfile/>
+  return <Checkout/>
 }

@@ -4,7 +4,7 @@
         "title": "Single",
         "price": 79,
         "period": "meal",
-        "description": "Food content same as other plan",
+        "description": "Single meal",
         "features": [
           "Good for trial",
           "meal depend on day",
@@ -16,7 +16,7 @@
         "title": "Lunch/Dinner",
         "price": 1699,
         "period": "month",
-        "description": "If you want only Lunch or Dinner",
+        "description": "Only Lunch or Dinner",
         "features": [
           "30 tiffins",
           "meal depend on day",
@@ -29,7 +29,7 @@
         "title": "Lunch + Dinner",
         "price": 2899,
         "period": "month",
-        "description": "Lunch and dinner combo",
+        "description": "Lunch and Dinner Combo",
         "features": [
           "57 tiffins",
           "meal depend on day",

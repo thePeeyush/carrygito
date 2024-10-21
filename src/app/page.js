@@ -1,5 +1,5 @@
-import Footer from '@/components/footer';
-import Sections from '@/components/sections';
+import Footer from '@/components/Footer';
+import Sections from '@/components/Sections';
 
 
 function Home() {
@@ -11,4 +11,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home;  

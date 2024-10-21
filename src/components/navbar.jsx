@@ -1,9 +1,12 @@
 'use client'
+import userData from "@/store/userdata";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const { authenticated } = userData(s => s);
   const navToggle = () => {
     setNavbarOpen(!navbarOpen);
   };
@@ -41,19 +44,19 @@ function Navbar() {
         }`}
       >
         <li className=" mb-5 lg:mb-0">
-          <a href="#Plans" className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300">Plans</a>
+          <Link href="#Plans" className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300">Plans</Link>
         </li>
 
         <li className="mb-5 lg:mb-0">
-          <a href="#Footer" className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300">Service</a>
+          <Link href="#Footer" className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300">Service</Link>
         </li>
 
         <li className="mb-5 lg:mb-0">
-          <a href="https://wa.me/+918989599699?text=Hi%20CarryGITO" className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300">Contact</a>
+          <Link href="https://wa.me/+918989599699?text=Hi%20CarryGITO" className="font-medium text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300">Contact</Link>
         </li>
 
         <li className="flex" >
-          <a href="/order" className=" w-full py-3 px-8 font-medium text-green-500 text-lg text-center border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">Get Trial</a>
+          <Link href={authenticated ? "/profile" : "/order?plan=79"} className=" w-full py-3 px-8 font-medium text-green-500 text-lg text-center border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">{authenticated ? "Profile" : "Get Trial"}</Link>
         </li>
       </ul>
     </nav>

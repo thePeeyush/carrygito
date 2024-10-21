@@ -1,12 +1,13 @@
-import Navbar from "./navbar";
-import Header from "./header";
-import Faq from "./faq";
-import Plans from "./plans";
+import Navbar from "./Navbar";
+import Header from "./Header";
+import Faq from "./Faq";
 import ourPlans from "../data/ourplans.json";
-import { Show } from "./show";
-import Menu from "./menu";
+import { Show } from "./Show";
+import Menu from "./Menu";
+import Plans from "./Plans";
 
 function Sections() {
+  
   return (
     <>
       <section className="py-2">
@@ -25,7 +26,7 @@ function Sections() {
       </section>
 
       <section>
-        <Plans ourPlans={ourPlans.Plans} />
+        <Plans ourPlans={ourPlans.Plans} className={'w-full bg-green-50 p-10 pb-20'}/>
       </section>
       <section>
         <Faq />

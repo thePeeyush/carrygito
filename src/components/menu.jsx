@@ -77,9 +77,6 @@ const MenuCard = ({img,children}) => {
   )
 }
 
-
-
-
 export default Menu;
 
 

@@ -4,7 +4,7 @@ import Form from "@/components/form";
 import Verification from "@/components/otpverify";
 import Payment from "@/components/payment";
 import { userInteraction } from "../../../store/userdata";
-import Done from "@/components/Done";
+import Done from "@/components/done";
 
 export default function Page() {
 

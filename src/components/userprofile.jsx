@@ -104,7 +104,7 @@ export default function Profile(data) {
       <div class="profile-card">
         <div class="order head">New Order</div>
         <div class="header">
-          <img src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png" alt="profile" class="logo">
+          <img src="https://img.freepik.com/free-vector/young-man-with-glasses-avatar_1308-175763.jpg?ga=GA1.2.432819898.1713300087&semt=ais_hybrid" alt="profile" class="logo">
           <div class="username">${fullname}</div>
           <div class="info-table">
             <table>

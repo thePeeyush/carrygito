@@ -41,7 +41,7 @@ export default function Payment() {
       body: bodyContent,
     });
     if (response.ok === true) {
-      setStatus('Done')
+      setStatus('done')
     }
     else {
         setPass(false);
